@@ -1,15 +1,16 @@
 (lang dune 3.19)
 
 (name socc)
+(version 0.1.0)
 
 (generate_opam_files true)
 
 (source
- (github username/reponame))
+ (github otherJLo/socc))
 
-(authors "Author Name <author@example.com>")
+(authors "Jonathan Lopez <jonathanglopez@gmail.com>")
 
-(maintainers "Maintainer Name <maintainer@example.com>")
+(maintainers "Jonathan Lopez <jonathanglopez@gmail.com>")
 
 (license LICENSE)
 
@@ -17,10 +18,8 @@
 
 (package
  (name socc)
- (synopsis "A short synopsis")
- (description "A longer description")
- (depends ocaml)
+ (synopsis "Simple Ocaml C Compiler")
+ (description "C compiler implementing a subset of the C17 standard")
+ (depends (ocaml (>= 5.3.0) ) dune (alcotest :with-test) (odoc :with-doc))
  (tags
-  ("add topics" "to describe" your project)))
-
-; See the complete stanza docs at https://dune.readthedocs.io/en/stable/reference/dune-project/index.html
+  ("c" "compiler" your project)))
