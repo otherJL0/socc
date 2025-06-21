@@ -1,6 +1,7 @@
 (lang dune 3.19)
 
 (name socc)
+
 (version 0.1.0)
 
 (generate_opam_files true)
@@ -20,6 +21,11 @@
  (name socc)
  (synopsis "Simple Ocaml C Compiler")
  (description "C compiler implementing a subset of the C17 standard")
- (depends (ocaml (>= 5.3.0) ) dune (alcotest :with-test) (odoc :with-doc))
+ (depends
+  (ocaml
+   (>= 5.3.0))
+  dune
+  (alcotest :with-test)
+  (odoc :with-doc))
  (tags
   ("c" "compiler" your project)))
